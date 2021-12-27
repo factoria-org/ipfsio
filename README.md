@@ -4,13 +4,13 @@
 
 ```javascript
 const { I } = require('ipfsio')
-const ipfs = new IPFSIO(<nft.storage key>)
-await ipfs.url("https://imgur.com/sdfsdf")        // Import file from HTTP URL
-await ipfs.object({                               // Write objec
+const i = new I(<nft.storage key>)
+await i.url("https://imgur.com/sdfsdf")        // Import file from HTTP URL
+await i.object({                               // Write object
   name: "gm",
   description: "hello world"
 })
-await ipfs.buffer(Buffer.from("fdadsfadsfasdf"))  // Write buffer
-await ipfs.file(filePath)                         // Write file at path
-await ipfs.folder(folderPath)                     // Write folder at path
+await i.buffer(Buffer.from("fdadsfadsfasdf"))  // Write buffer
+await i.file(filePath)                         // Write file at path
+await i.folder(folderPath)                     // Write folder at path
 ```

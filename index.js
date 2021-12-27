@@ -1,17 +1,6 @@
 const { NFTStorage, Blob, File } = require('nft.storage')
 const fs = require('fs')
 const path = require('path')
-/////////////////////////////////////////////////////////////////////////////
-//
-// const { I } = require('ipfsio')
-// const ipfs = new IPFSIO(<nft.storage key>)
-// await ipfs.url("https://imgur.com/sdfsdf")
-// await ipfs.object({ name: "gm", description: "hello world" })
-// await ipfs.buffer(Buffer.from("fdadsfadsfasdf"))
-// await ipfs.file(filePath)
-// await ipfs.folder(folderPath)
-//
-/////////////////////////////////////////////////////////////////////////////
 class I {
   constructor(key) {
     this.storage = new NFTStorage({ token: key })
