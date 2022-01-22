@@ -7,12 +7,12 @@ class I {
     this.storage = new NFTStorage({ token: key })
   }
   async url(url) {
-    const { data, headers } = await axios({
+    const data = await axios({
       method: 'get',
       url: url,
       responseType: 'arraybuffer'
     }).then((r) => {
-      return Buffer.from(r.data)
+      return r.data
     })
     const cid = await this.storage.storeBlob(new Blob([data]))
     return cid
